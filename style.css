@@ -83,7 +83,7 @@ small {
     background-color: var(--main-color-darker);
     opacity: 0;
     pointer-events: none;
-    transition: opacity 0.5 ease;
+    transition: opacity 0.5s ease;
 }
 
 .menu.is-active {
@@ -101,8 +101,29 @@ small {
     background-color: var(--contrast-color);
 }
 
-.none {
-    display: none;
+@media screen and (min-width:1024px) {
+    .menu-btn {
+        display: none;
+    }
+
+    .menu {
+        width: auto;
+        position: static;
+        flex-direction: row;
+        gap: 60px;
+        opacity: 1;
+        pointer-events: auto;
+        background-color: transparent;
+    }
+
+    .menu a {
+        width: auto;
+        padding: 0;
+    }
+
+    .menu a:hover {
+        background-color: transparent;
+    }
 }
 
 
@@ -115,16 +136,18 @@ small {
    max-width: var(--max-width); 
 }
 
-
-
+.none {
+    display: none;
+}
 
 
 
 
 /* ********** Site Styles ********** */
 .header {
+    position: fixed;
+    width: 100%;
     height: var(--header-height);
-    background-color: var(--main-color);
 }
 
 .header > .container {
@@ -136,3 +159,31 @@ small {
 .logo img {
     width: 95px;
 }
+
+@media screen and (min-width:768px) {
+    
+}
+
+@media screen and (min-width:1024px) {
+    .header {
+        height: calc(var(--header-height) + 10px);
+    }
+
+    .header > .container {
+        padding: 0 4rem;
+        justify-content: space-between;
+    }
+
+    .logo img {
+        width: 105px;
+    }
+    
+}
+
+#home {
+    height: 100vh;
+    width: 100vw;
+    background-image: url(/assets/background-home.svg);
+    background-repeat: no-repeat;
+}
+
