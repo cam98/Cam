@@ -1,0 +1,138 @@
+/* ********** Custom Properties ********** */
+:root {
+ --main-color: #FF7245;
+ --main-color-darker:#ff5d2c93;
+ --secondary-color: #FFC317;
+ --contrast-color: #EB3A4A;
+ --second-constant-color: #F4ABBE;
+ --white: #FFFCF7;
+ --black: #3D3D3D;
+ --main-font: 'Space Mono', monospace;
+ --title-font: 'Red Hat Display', sans-serif;
+ --title-size: 3rem;
+ --text-size: 1.6rem;
+ --title-desktop-size: 3.6rem;
+ --text-desktop-size: 1.8rem;
+ --max-width: 1400px;
+ --header-height: 70px;
+
+}
+
+/* ********** Reset ********** */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 62.5%;
+    scroll-behavior: smooth;
+    font-family: var(--main-font);
+}
+
+a {
+    color: var(--white);
+    text-decoration: none;
+    transition: all 0.5s ease; 
+    font-size: 1.8rem;
+}
+
+h1 {
+    font-family: var(--title-font);
+    font-size: var(--title-size);
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+p {
+    font-size: var(--text-size);
+}
+
+small {
+    font-family: var(--main-font);
+}
+
+
+
+
+
+/* ********** Components ********** */
+
+/* ******** Menu ******** */
+.menu-btn {
+    position: absolute;
+    right: 2rem;
+    cursor: pointer;
+    border: 0;
+    background-color: var(--main-color);
+}
+
+.menu {
+    position: fixed;
+    left: 0;
+    top: var(--header-height);
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--main-color-darker);
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.5 ease;
+}
+
+.menu.is-active {
+    opacity: 1;
+    pointer-events: auto;
+}
+
+.menu a {
+    width: 100vh;
+    padding: 2rem;
+    text-align: center;
+}
+
+.menu a:hover {
+    background-color: var(--contrast-color);
+}
+
+.none {
+    display: none;
+}
+
+
+
+
+
+/* ********** Utilities ********** */
+.container {
+   margin: 0 auto;
+   max-width: var(--max-width); 
+}
+
+
+
+
+
+
+
+/* ********** Site Styles ********** */
+.header {
+    height: var(--header-height);
+    background-color: var(--main-color);
+}
+
+.header > .container {
+    display:flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.logo img {
+    width: 95px;
+}
