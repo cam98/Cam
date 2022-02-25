@@ -31,6 +31,10 @@ html {
     font-family: var(--main-font);
 }
 
+body {
+    overflow-x: hidden; 
+}
+
 a {
     color: var(--white);
     text-decoration: none;
@@ -41,6 +45,13 @@ a {
 h1 {
     font-family: var(--title-font);
     font-size: var(--title-size);
+    color: var(--white);
+}
+
+h3 {
+    font-family: var(--title-font);
+    font-size: 1.8rem;
+    color: var(--white);
 }
 
 img {
@@ -62,13 +73,40 @@ small {
 
 /* ********** Components ********** */
 
+
+/* ******** Hero Background ******** */
+.background {
+    height: 100vh;
+    width: 100vw;
+    background-image: var(--background-mobile);
+    background-repeat: no-repeat;
+    background-size: 100% auto;
+    background-attachment: fixed;
+}
+
+@media screen and (min-width:768px) {
+    .background {
+        background-image: var(--background-big);
+        background-size: contain;
+    }
+}
+
+@media screen and (min-width:1024px) {
+    .background {
+        background-image: var(--background-big);
+        background-size: cover;
+
+    }
+}
+
+
 /* ******** Menu ******** */
 .menu-btn {
     position: absolute;
     right: 2rem;
     cursor: pointer;
     border: 0;
-    background-color: var(--main-color);
+    background-color: transparent;
 }
 
 .menu {
@@ -80,7 +118,7 @@ small {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    background-color: var(--main-color-darker);
+    background-color: var(--contrast-color);
     opacity: 0;
     pointer-events: none;
     transition: opacity 0.5s ease;
@@ -98,7 +136,7 @@ small {
 }
 
 .menu a:hover {
-    background-color: var(--contrast-color);
+    background-color: var(--main-color-darker);
 }
 
 @media screen and (min-width:1024px) {
@@ -145,7 +183,7 @@ small {
 
 /* ********** Site Styles ********** */
 .header {
-    position: fixed;
+    position: absolute;
     width: 100%;
     height: var(--header-height);
 }
@@ -180,10 +218,37 @@ small {
     
 }
 
-#home {
+
+.hero {
     height: 100vh;
-    width: 100vw;
-    background-image: url(/assets/background-home.svg);
-    background-repeat: no-repeat;
+    padding-top: 25%;
+    display: flex;
+    flex-direction: column;
+    gap: 10%;
+    
 }
+
+.hero-title {
+    padding-left: 3rem;
+    width: 90%;
+}
+
+.hero-title h1 {
+    font-size: 4rem; /* 6vw */
+    line-height:4.6rem;
+}
+
+.hero-sticker {
+    width: 300px;
+    max-width: 600px;
+    height: auto;
+    align-self: flex-end;
+}
+
+.hero-sticker img {
+    width: inherit;
+    transform: translateX(50px);
+}
+
+
 
