@@ -52,7 +52,7 @@ h1 {
 h2 {
     display: inline-block;
     font-family: var(--title-font);
-    font-size: var(--title-size);
+    font-size: 5vh;
     color: var(--white);
 }
 
@@ -87,7 +87,7 @@ small {
 
 
 /* ******** Hero Background ******** */
-.background {
+.background-image {
     height: 100vh;
     width: 100vw;
     background-image: var(--background-mobile);
@@ -97,14 +97,14 @@ small {
 }
 
 @media screen and (min-width:768px) {
-    .background {
+    .background-image {
         background-image: var(--background-big);
         background-size: 110%;
     }
 }
 
 @media screen and (min-width:1024px) {
-    .background {
+    .background-image {
         background-image: var(--background-big);
         background-size: cover;
 
@@ -119,20 +119,47 @@ small {
 }
 
 .work {
+    display: flex;
+    align-items: flex-end;
     background-size: cover;
 }
 
 .work:nth-child(1) {
-    background-image: url(/assets/jota.png)
+    background-image: url(/assets/jota.png);
 }
 
 .work:nth-child(2) {
-    background-image: url(/assets/la-montana-azul.png)
+    background-image: url(/assets/la-montana-azul.png);
 }
 
 .work:nth-child(3) {
-    background-image: url(/assets/mencanta.png)
+    background-image: url(/assets/mencanta.png);
 }
+
+.work-links {
+    padding: 2% 6%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+    background: var(--secondary-color);
+    border-top-right-radius: 50px;
+    border-bottom-right-radius: 50px;
+    box-shadow: 0px 5px 0px var(--contrast-color);
+    transform: translateY(-10px);
+}
+
+.work-links a {
+    width: 10vw;
+    max-width: 60px;
+    height: auto;
+}
+
+.work-links img {
+    vertical-align: middle;
+    width: inherit;
+}
+
 
 @media screen and (min-width:768px) {
     .gallery {
@@ -142,7 +169,25 @@ small {
     .work {
         background-position: top;
     }
+
+    .work-links {
+        transform: translateY(-60px);
+        gap: 20px;
+    }
+
+    .work-links a {
+        width: 5vw;
+    }
 }
+
+@media screen and (min-width:1024px)  {
+    .work-links {
+        transform: translateY(-80px);
+        gap: 30px;
+    }
+}
+
+
 /* ******** Menu ******** */
 .menu-btn {
     position: absolute;
@@ -222,9 +267,15 @@ small {
     display: none;
 }
 
-.title {
-    background-color: var(--second-constant-color);
+.background-text {
+    background-color: var(--back-color);
     padding: 2% 6%;
+}
+
+@media screen and (min-width:2000px) {
+    .background-text {
+        padding: 1% 4%;
+    }
 }
 
 .border-radius {
