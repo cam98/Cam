@@ -5,6 +5,7 @@
  --secondary-color: #FFC317;
  --contrast-color: #EB3A4A;
  --second-constant-color: #F4ABBE;
+ --dark-color: #0389C8;
  --white: #FFFCF7;
  --black: #3D3D3D;
  --main-font: 'Space Mono', monospace;
@@ -15,7 +16,6 @@
  --text-desktop-size: 1.8rem;
  --max-width: 1800px;
  --header-height: 70px;
-
 }
 
 /* ********** Reset ********** */
@@ -44,6 +44,13 @@ a {
 }
 
 h1 {
+    font-family: var(--title-font);
+    color: var(--white);
+    text-shadow: 4px 4px 0 var(--contrast-color);
+}
+
+h2 {
+    display: inline-block;
     font-family: var(--title-font);
     font-size: var(--title-size);
     color: var(--white);
@@ -86,7 +93,7 @@ small {
     background-image: var(--background-mobile);
     background-repeat: no-repeat;
     background-size: 100% auto;
-    background-attachment: fixed;
+    background-attachment: scroll;
 }
 
 @media screen and (min-width:768px) {
@@ -105,6 +112,37 @@ small {
 }
 
 
+/* ******** Gallery ******** */
+.gallery {
+    height: 100vh;
+    display: grid;
+}
+
+.work {
+    background-size: cover;
+}
+
+.work:nth-child(1) {
+    background-image: url(/assets/jota.png)
+}
+
+.work:nth-child(2) {
+    background-image: url(/assets/la-montana-azul.png)
+}
+
+.work:nth-child(3) {
+    background-image: url(/assets/mencanta.png)
+}
+
+@media screen and (min-width:768px) {
+    .gallery {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .work {
+        background-position: top;
+    }
+}
 /* ******** Menu ******** */
 .menu-btn {
     position: absolute;
@@ -141,7 +179,7 @@ small {
 }
 
 .menu a:hover {
-    background-color: var(--main-color-darker);
+    text-shadow: 2px 2px 0px var(--shadow-text-color);
 }
 
 @media screen and (min-width:1024px) {
@@ -173,6 +211,7 @@ small {
 
 
 
+
 /* ********** Utilities ********** */
 .container {
    margin: 0 auto;
@@ -183,6 +222,20 @@ small {
     display: none;
 }
 
+.title {
+    background-color: var(--second-constant-color);
+    padding: 2% 6%;
+}
+
+.border-radius {
+    border-top-right-radius: 50px;
+    border-bottom-right-radius: 50px;
+}
+
+.shadows {
+    text-shadow: 2px 2px 0px var(--shadow-text-color);
+    box-shadow: 0px 5px 0px var(--shadow-box-color);
+}
 
 
 
@@ -230,7 +283,7 @@ small {
     padding-top: 15vh;
     display: flex;
     flex-direction: column;
-    gap: 10%;
+    gap: 5%;
     
 }
 
@@ -326,4 +379,12 @@ small {
     }
 }
 
+
+#works {
+    position: relative;
+}
+
+#works > h2 {
+    position: absolute
+}
 
