@@ -1,0 +1,97 @@
+#about {
+    height: auto;
+}
+
+#about > .container {
+    display: grid;
+    grid-template-rows: auto 1fr;
+}
+
+.about-me {
+    position: relative;
+    margin: 0 10px;
+}
+
+.about-me .skills {
+    height: 28vh;
+    margin: 4vh 0;
+    display: grid;
+    grid-template: repeat(3, 45px) / repeat(2, minmax(100px, 200px));
+    grid-auto-flow: column;
+    gap: 10% 20%;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+}
+
+.skills h3 {
+    padding: 8%;
+}
+
+.skills h3:nth-child(n+4) {
+    text-align: right;
+}
+
+.about-me .my-photo {
+    width: 55vw;
+    position: absolute;
+    top: 5%;
+    right: calc(50vw - (55vw/2));
+}
+
+.my-photo img {
+    border-top-left-radius: 170px;
+    border-top-right-radius: 170px;
+}
+
+.about-info {
+    z-index: 900;
+}
+
+.about-info p{
+    margin: 4%;
+}
+
+@media screen and (min-width:768px) {
+    .about-me .skills {
+        height: 30vh;
+        margin: 4vh 0;
+        gap: 15% 25%;
+    }
+
+    .skills h3 {
+        padding: 10%;
+        /* text-align: center; */
+        font-size: 2vw;
+    }
+
+    .skills h3:nth-child(n+4) {
+        /* text-align: center; */
+    }
+
+    .about-me .my-photo {
+        width: 35vw;
+        top: 25px;
+        right: calc(50vw - (35vw/2));
+    }
+}
+
+@media screen and (min-width:1024px) {
+    #about > .container {
+        display: grid;
+        grid-template-columns: 600px 1fr;
+    }
+
+    .about-me .skills {
+        height: 40vh;
+    }
+
+    .about-info p{
+        font-size: 1.8rem;
+    }
+
+    .about-me .my-photo {
+        width: 25vw;
+        right: calc(25vw - (25vw/2));
+    }
+}
