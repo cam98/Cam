@@ -313,7 +313,7 @@ small {
 
 /* ********** Site Styles ********** */
 #about .container{
-    margin: 4% auto;
+    margin: 4%;
 }
 
 .about-me {
@@ -409,6 +409,7 @@ small {
 }
 
 @media screen and (min-width:768px) {
+
     .about-me {
         height: 50vh;
         flex-direction: row;
@@ -488,7 +489,7 @@ small {
     }
 }
 
-@media screen and (min-width:1024px) {
+@media screen and (min-width:1024px) {  
     .about-me .skills {
         max-width: 600px;
     }
@@ -509,6 +510,10 @@ small {
 }
 
 @media screen and (min-width:2195px) {
+    #about .container{
+        margin: 4% auto;
+    }
+    
     .about-me .skills {
         max-width: 800px;
         height: 50vh;
