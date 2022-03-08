@@ -22,8 +22,8 @@
                 </a>
             </div>
             <nav class="menu" style="--shadow-text-color: var(--contrast-color);">
-                <a href="#works">My Work</a>
                 <a href="#about">About Me</a>
+                <a href="#works">My Work</a>
                 <a href="#contact">Contact</a>
             </nav>
             <button class="menu-btn" type="button">
@@ -33,7 +33,7 @@
         </section>
     </header>
     <main>
-        <section id="home" class="background-image" style="--background-mobile: url('/assets/background-home.svg'); --background-big: url('/assets/background-home-b.svg');">
+        <section id="home" class="background-image" style="--background-mobile: url('/assets/background-home.svg'); --background-big: url('/assets/background-home-big.svg');">
             <div class="hero">
                 <div class="hero-title">
                 <h1>I’m a Web Designer <br>+ Front-end Developer</h1>
@@ -46,7 +46,7 @@
         </section>
 
         <section id="about">
-            <h2 class="background-text border-radius shadows" style="--back-color: var(--contrast-color); --shadow-box-color: var(--secondary-color); --shadow-text-color: var(--dark-color);">About Me</h2>
+            <h2 class="background-text border-radius shadows" style="--back-color: var(--contrast-color); --shadow-box-color: var(--second-contrast-color); --shadow-text-color: var(--dark-color);">About Me</h2>
             <article class="container about-me">
                 <div>
                     <div class="skills">
@@ -86,7 +86,7 @@
                         <span class="back-lines3"></span>
 
                         <div class="my-photo">
-                            <img src="/assets/my-photo.png" alt="">
+                            <img src="/assets/my-photo.png" alt="Camila's picture">
                         </div>
                     </div>
                 </div>
@@ -105,11 +105,11 @@
         </section>
 
         <section id="works">
-            <h2 class="background-text border-radius shadows" style="--back-color: var(--second-contrast-color); --shadow-box-color: var(--contrast-color); --shadow-text-color: var(--dark-color);">My Work</h2>
+            <h2 class="background-text border-radius shadows" style="--back-color: var(--secondary-color); --shadow-box-color: var(--contrast-color); --shadow-text-color: var(--dark-color);">My Work</h2>
             <article class="gallery">
                 <div class="gallery-image">
                     <div class="gallery-opacity"></div>
-                    <div class="gallery-links">
+                    <div class="gallery-links background-text border-radius shadows" style="--back-color: var(--secondary-color); --shadow-box-color: var(--contrast-color);">
                         <a href=""><img src="/assets/github-icon.svg" alt=""></a>
                         <a href=""><img src="/assets/behance-icon.svg" alt=""></a>
                         <a href=""><img src="/assets/jota-logo.png" alt=""></a>
@@ -118,7 +118,7 @@
 
                 <div class="gallery-image">
                     <div class="gallery-opacity"></div>
-                    <div class="gallery-links">
+                    <div class="gallery-links background-text border-radius shadows" style="--back-color: var(--secondary-color); --shadow-box-color: var(--contrast-color);">
                         <a href=""><img src="/assets/github-icon.svg" alt=""></a>
                         <a href=""><img src="/assets/behance-icon.svg" alt=""></a>
                         <a href=""><img src="/assets/montana-logo.png" alt=""></a>
@@ -127,7 +127,7 @@
 
                 <div class="gallery-image">
                     <div class="gallery-opacity"></div>
-                    <div class="gallery-links">
+                    <div class="gallery-links background-text border-radius shadows" style="--back-color: var(--secondary-color); --shadow-box-color: var(--contrast-color);">
                         <a href=""><img src="/assets/github-icon.svg" alt=""></a>
                         <a href=""><img src="/assets/behance-icon.svg" alt=""></a>
                         <a href=""><img src="/assets/mencanta-logo.png" alt=""></a>
@@ -136,8 +136,59 @@
             </article>
         </section>
        
-        <section id="contact">
-    
+        <section id="contact" class="background-image background-bottom" style="--background-mobile: url('/assets/background-contact.svg'); --background-big: url('/assets/background-contact-big.svg');">
+            <h2 class="background-text border-radius shadows" style="--back-color: var(--main-color); --shadow-box-color: var(--secondary-color); --shadow-text-color: var(--contrast-color);">Contact Me</h2>
+            <div class="container contact-me">
+                <article class="contact-info">
+                    <p>Let’s get in touch and let me know your ideas so we can create an amazing website just for you.</p>
+
+                    <h3>Camila Bernal</h3>
+                    <p>Bogotá, Colombia</p>
+
+                    <div class="info-links">
+                        <a href="mailto:camilab1998@hotmail.com"><img src="/assets/mail-icon.svg" alt=""></a>
+                        <a href=""><img src="/assets/linkedin-icon.svg" alt=""></a>
+                        <a href=""><img src="/assets/github-icon.svg" alt=""></a>
+                        <a href=""><img src="/assets/behance-icon.svg" alt=""></a>
+                    </div>
+
+                </article>
+                <form class="contact-form" action="">
+                    <label for="name">
+                        <span>Name</span>
+                        <input class="shadow-contact" style="--shadow-box-color: var(--main-color);" type="text" id="name" name="name" 
+                        title="Name just accept letters" pattern="^[A-Za-zÑñÁáÉéÍíÓóÚúÜü\s]+$" required>
+                    </label>
+                   
+                    <label for="email">
+                        <span>Email</span>
+                        <input class="shadow-contact" style="--shadow-box-color: var(--main-color);" type="email" id="email" name="email"  title="Wrong email" pattern="^[a-z0-9]+(\.[_a-z0-9]+)*@[a-z0-9-]+(\.[a-z0-9-]+)*(\.[a-z]{2,15})$" required>
+                    </label>
+                
+                    <label for="text">
+                        <span>Message</span>
+                        <textarea class="shadow-contact" style="--shadow-box-color: var(--main-color);" name="comments" cols="45" rows="10" required></textarea>
+                    </label>
+                    
+                    <!-- <div class="contact-form-loader">
+                        <img src="/assets/loader.svg">
+                    </div> -->
+
+                    <div class="contact-form-loader loader none"></div>
+
+                    <input class="shadow-contact" style="--shadow-box-color: var(--dark-color);" type="submit" value="Send">
+                </form>
+                <article id="thanks" class="modal">
+                    <div class="modal-content">
+                        <article class="contact-form-response">
+                            <h3>¡Thanks for leaving me your message!
+                                <br>
+                                I'll be in touch soon.
+                            </h3>
+                        </article>
+                    </div>
+                </article>
+            </div>
         </section>
         <footer>
             <small>Made with love by Camila Bernal 💗</small>
