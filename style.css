@@ -114,6 +114,7 @@ small {
 }
 
 /* ******** Contact Form ******** */
+
 .contact-form {
     margin-bottom: 5vh;
     padding: 0 2%;
@@ -122,6 +123,7 @@ small {
     display: flex;
     flex-direction: column;
     gap: 1vh;
+    -webkit-appearance: none;
 }
 
 .contact-form > * {
