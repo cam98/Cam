@@ -18,6 +18,31 @@
     })
 })(document);
 
+/* ******** About Me ******** */
+((d)=> {
+    const $btnArrowDown = d.querySelectorAll(".arrow-down"),
+    $skillName = d.querySelectorAll(".skill-name"),
+    $skillDescription = d.querySelectorAll(".skill-description");
+
+    $btnArrowDown[0].addEventListener("click", e => {
+        $skillDescription[0].classList.toggle("active");
+        $skillName[0].classList.toggle("shadows");
+        $btnArrowDown[0].classList.toggle("active")
+
+    })
+
+    $btnArrowDown[1].addEventListener("click", e => {
+        $skillDescription[1].classList.toggle("active");
+        $skillName[1].classList.toggle("shadows");
+        $btnArrowDown[1].classList.toggle("active")
+    })
+
+    console.log($skillName);
+})(document);
+
+
+
+
 
 /* ******** Contact Form ******** */
 ((d)=> {
