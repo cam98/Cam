@@ -690,7 +690,7 @@ textarea:focus, input:focus{
 
 .skill-photo {
     z-index: 900;
-    max-height: 450px;
+    max-height: 350px;
     grid-row: 3/5;
     grid-column: 1;
     justify-self: center;
@@ -748,6 +748,10 @@ textarea:focus, input:focus{
 
     .skill-description aside span {
         padding: 2% 8%;
+    }
+
+    .skill-photo {
+        max-height: 450px;
     }
 
 }
